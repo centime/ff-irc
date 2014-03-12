@@ -8,3 +8,5 @@ The resulting lib/bundle is half automatically generated, half manually patched 
 
 to generate your own : cd generate && node generate_bundle.js
 you will need browserify installed.
+
+to run the demo, you can try the ff-irc_demo.xpi file

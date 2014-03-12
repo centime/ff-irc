@@ -1,8 +1,8 @@
 {
-  "name": "test-irc",
-  "title": "test-irc",
+  "name": "ff-irc_demo",
+  "title": "ff-irc_demo",
   "id": "jid1-9XiRXEqpBmuUrA",
-  "description": "a basic add-on",
+  "description": "a basic demo of ff-irc",
   "author": "",
   "license": "MPL 2.0",
   "version": "0.1",
