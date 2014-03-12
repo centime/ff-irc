@@ -1,8 +1,10 @@
 Ugly hacks to use the node-irc lib in the firefox, inside an extension
 
-Using mozSocket for network connections
-Using Browserify to pack the process.EventEmitter class from node, which I need to apply to mozSocket.
-The Browserify generated code had then to be modified because of namspace collisions..
+Using mozSocket (tweaked just a bit) for network connections
+Using Browserify to pack the process.EventEmitter class from nodejs, which we then need to apply to mozSocket.
+The Browserify-generated code is then to resolve namespace collisions..
 
-everything is just currently laying there in a complete mess, be warned, and read it at your own risks.
+The resulting lib/bundle is half automatically generated, half manually patched : read it at your own risks !
 
+to generate your own : cd generate && node generate_bundle.js
+you will need browserify installed.
