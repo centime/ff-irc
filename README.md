@@ -23,6 +23,6 @@ A very simple and incomplete demo of an irc client may be installed using ff-irc
 It simply connects itself to chat.freenode.net#urmom, and can send/show messages. The list of users isn't updated when people join/leave.
 
 external sources :
-    https://github.com/martynsmith/node-irc
-    http://hg.instantbird.org/experiments/file/d4326febed80/modules/mozSocket.jsm
-    https://github.com/substack/node-browserify
+https://github.com/martynsmith/node-irc
+http://hg.instantbird.org/experiments/file/d4326febed80/modules/mozSocket.jsm
+https://github.com/substack/node-browserify

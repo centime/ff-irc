@@ -21,7 +21,7 @@ function rewrite_mozSocket(source) {
    r("const {classes: Cc, interfaces: Ci, utils: Cu} = Components;",
         "const {Cc, Ci, Cu} = require('chrome');"
     );
-   r("Services.console.logStringMessage(str);","console.log(str)");
+   r("Services.console.logStringMessage(str);","");
    r("Cu.import(\"resource:///modules/imServices.jsm\");","");
 
    // set a default delimiter. (patch the lib ?)
@@ -40,6 +40,9 @@ function rewrite_mozSocket(source) {
             \n\
             this.write = function(data){\n\
                 socket.send(data);\n\
+            };\n\
+            this.end = function(data){\n\
+                socket.disconnect();\n\
             };\n\
             \n\
             socket.onStartRequest = function(aRequest, aContext) {\n\
