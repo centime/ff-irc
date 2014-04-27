@@ -40,6 +40,12 @@ function rewrite_irc (source) {
         "self.conn = new Connection(self.opt.port, self.opt.server) ;"
         );
 
+    // add an event handler for nicknameinuse
+    r("self.nick = self.opt.nick + self.opt.nickMod;",
+        "self.nick = self.opt.nick + self.opt.nickMod;\n\
+        self.emit('nicknameinuse',self.opt.nick,self.nick);"
+        );
+
     // disable temporarily ssl, just because
     r("if (self.opt.secure) {",
         "if (self.opt.secure) {\n\
